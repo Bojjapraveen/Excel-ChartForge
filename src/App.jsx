@@ -32,7 +32,7 @@ const App = () => {
       {/* Header */}
       <div className="headerbarContainer">
         <img src="/praveenlogo1.png" alt="App Logo" className="logo" />
-        <h1>Excel-Chart Dashboard</h1>
+        <h1>Excel-ChartForge</h1>
         <button className="refresh-icon" onClick={() => window.location.reload()}>
           🔄 {/* ✅ Refresh Icon */}
         </button>
