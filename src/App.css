@@ -1,0 +1,241 @@
+/* Overall container setup */
+.app-container {
+  /* border: 2px solid yellow; */
+  border-radius: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  margin: 2px;
+  gap: 10px;
+}
+
+/* Mobile View - Stack Elements Vertically */
+@media screen and (max-width: 768px) {
+  .app-container {
+    flex-direction: column; /* ✅ Changes layout to stacked */
+    width: 100%;
+    height: auto; /* ✅ Allows flexible height */
+    overflow-y: auto; /* ✅ Enables scrolling for smaller screens */
+  }
+}
+
+
+/* Header Bar */
+.headerbarContainer {
+  border-radius: 10px;
+  width: 100%;
+  height: 9%;
+  background-color: #1d1d1d;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* padding: 10px; */
+  font-size: 10px;
+  position: fixed;
+  top: 0;
+}
+
+/* Left Logo */
+.logo {
+  border-radius: 50px;
+  width: 40px; /* ✅ Adjust size */
+  height: auto;
+  margin-left: 10px;
+  margin-right: 15px; /* ✅ Adds space next to text */
+  animation: blink 1s infinite alternate; /* ✅ Blinking effect */
+}
+
+@keyframes blink {
+  0% { opacity: 1; }  /* ✅ Fully visible */
+  100% { opacity: 0; } /* ✅ Fully hidden */
+}
+
+
+
+/* Refresh Icon */
+.refresh-icon {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+/* Refresh Icon Hover Effect */
+
+
+
+/* Upload Section */
+.uploadbarContainer {
+  border-radius: 10px;
+  width: 99%;
+  height: 18%;
+  background: linear-gradient(to right, rgb(148, 148, 150), rgb(95, 94, 94));
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-left: 10px;
+  position: fixed;
+  top: 10%;
+  overflow-y: auto;
+}
+
+/* Main Section */
+.mainsectionContainer {
+  /* background: linear-gradient(to top, #494948, #ff6699);  */
+  border-radius: 10px;
+  padding: 2px;
+  gap: 20px;
+  width: 100%;
+  height: 60%;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 30%;
+}
+
+/* Sidebar - Default for Larger Screens */
+.sidebar {
+  border: 2px solid yellow;
+  background: linear-gradient(to top, #494948, #ff6699);
+  border-radius: 10px;
+  width: 15%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto; /* Allows scrolling */
+  font-size: 12px;
+}
+
+
+
+  /* Sidebar toggle button */
+  .sidebar-toggle {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    background-color: #ffcc00;
+    color: black;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1100;
+  }
+
+  /* Show sidebar when active */
+  .sidebar.active {
+    display: flex;
+  }
+
+
+/* Chart Selection Container */
+.chart-select-container {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+/* Dropdown styling */
+.chart-select-container select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 12px;
+}
+
+/* Delete Button */
+.delete-button {
+  /* background-color: red; */
+  background: linear-gradient(to left, blue, red);
+  color: white;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+/* Chart Display Section */
+.ChartMainsection {
+  border-radius: 10px;
+  background: linear-gradient(to top, #494948, #ff6699);
+  /* border: 2px solid #ffcc00;  */
+  width: 80%;
+  padding: 10px; /* Added more space for clarity */
+  background-color: #f8f8f8; /* Slightly tinted background for contrast */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* Provides space between charts */
+  max-height: 600px; /* Prevents excessive growth */
+  overflow-y: auto; 
+  overflow-x: auto;
+}
+
+/* Chart Wrapper */
+.chart-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #e70e0e; 
+  border-radius: 10px;
+  padding: 15px; /* More padding for spacing */
+  background-color: #e3f2fd; /* Light blue background for better contrast */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Adds subtle shadow */
+  width: 300px; /* Default width */
+  height: 330px; /* Default height */
+}
+
+/* Responsive Chart Sizing */
+.chart-wrapper canvas {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 380px; /* Restricts excessive stretching */
+  max-height: 280px;
+}
+
+
+
+/* Footer */
+.footerbarContainer {
+  width: 100%;
+  height: 8%;
+  background-color: #696969;
+  border: 2px solid yellow;
+  border-radius: 10px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+
+
+}
+
+/* Column List Styling */
+.column-list {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping if necessary */
+  gap: 10px; /* Space between columns */
+  justify-content: center; /* Align columns in the center */
+  align-items: center; /* Vertical alignment */
+}
+
+/* Individual Column Item */
+.column-item {
+  background-color: #f0f0f0;
+  padding: 4px 4px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 10px;
+  font-weight: bold;
+  text-align: center;
+}

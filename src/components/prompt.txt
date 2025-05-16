@@ -1,0 +1,12 @@
+Development Plan
+🏗 Phase 1: Excel Upload & Column Extraction
+- Use XLSX library to parse Excel data
+- Extract column headers and display them
+📊 Phase 2: Chart Selection UI
+- Create a chart option selector (Pie, Bar, Line, etc.)
+- Display sliders/dropdowns for selecting columns for X/Y axes
+🚀 Phase 3: Dynamic Chart Rendering
+- Use Chart.js to generate charts based on user selections
+- Update the UI in real-time
+🔄 Phase 4: Continuous Chart Addition
+- After displaying a chart, ask “Would you like to add another chart?”
